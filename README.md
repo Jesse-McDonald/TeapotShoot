@@ -3,7 +3,7 @@ Teapot Shoot is a simple proof of concept network first person shooter client.  
 
 *The game features a teapot for each player that will move and spin as the player does
 
-*A custom binary network protocal for communication betwene players
+*A custom binary network protocal for communication between players
 
 *Projectiles and colisions for shooting
 
