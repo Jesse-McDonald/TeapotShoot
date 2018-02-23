@@ -1,0 +1,58 @@
+generic package
+8 bit package type
+
+type 1: Player
+32 bit ID
+16 bit texture id
+8 bit state
+32 bit x pos
+32 bit y pos
+32 bit z pos
+32 bit x velocity
+32 bit y velocity
+32 bit z velocity
+32 bit x velocity offset
+32 bit y velocity offset
+32 bit z velocity offset
+32 bit theta
+32 bit phi
+32 bit speed
+
+type 2: projectile
+32 bit ID
+32 bit owner
+16 bit texture id
+8 bit state
+32 bit x pos
+32 bit y pos
+32 bit z pos
+32 bit x velocity
+32 bit y velocity
+32 bit z velocity
+32 bit speed
+
+type 3: request 
+16 bit selector
+
+
+type 4: acknowledge
+16 bit type
+
+type 5: response
+16 bit selectoer
+32 bit data
+
+type 6: You (sends the client the player that is them),
+	regular player packet
+
+Selectors
+1: join
+	request a new player join, server should respond with an ID and then sent a type 6 package
+2: projectile
+	Request a new projectile to be fired from player, server should respond with an ID and tehn send a type 2 package
+3: sync	
+	request a syncronization, if sent from the client, server should respond with the number of active entities and then follow up with a full packet for each of them aswell as a single type 6 packet that is the player
+	if sent from server, the client should only respond with a type 6 packet of its self
+4: notify death
+	sent to the client to inform it that it has died send join again to rejoin
+
