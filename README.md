@@ -8,3 +8,5 @@ Teapot Shoot is a simple proof of concept network first person shooter client.  
 *Projectiles and colisions for shooting
 
 Future planned features include walls, maps, and textures that can be sent from the server to the players
+
+Currently only compiled for specific versions of linux, "game local" looks for the server on localhost:5143 and "game" looks for a server at isoptera.lcsc.ede:5143, the server is not regularily hosted
